@@ -1,14 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import { MainWrapper, SpanText } from "../style/style";
+import { MainContent } from "./MainContent";
 
-export default function Main() {
+export default function Main(props) {
   return (
     <MainWrapper id="wrapper">
-      <div className="container">Main</div>
+      <div className="container">
+        {!props.login ? <SpanText>Авторизируйтесь</SpanText> : <MainContent />}
+      </div>
     </MainWrapper>
   );
 }
-
-const MainWrapper = styled.main`
-  padding: 10px 0;
-`;
