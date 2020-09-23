@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { SpanDelBtn, ContactItemLi } from "../style/style";
 
-const ContactItem = (props) => {
+const ContactItem = ({ c, handleRemoveItme }) => {
   return (
     <ContactItemLi>
-      <span>{props.c.name}</span>
-      <span>{props.c.country}</span>
-      <span>{props.c.position}</span>
-      <SpanDelBtn></SpanDelBtn>
+      <span>{c.name}</span>
+      <span>{c.country}</span>
+      <span>{c.position}</span>
+      <SpanDelBtn name={c.name} onClick={handleRemoveItme}></SpanDelBtn>
     </ContactItemLi>
   );
 };

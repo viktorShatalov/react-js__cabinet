@@ -7,11 +7,10 @@ export default function Header(props) {
     <HeaderWrapper id="header">
       <div className="container">
         <Autorization login={props.login} />
-        {!props.login ? (
-          <Button onClick={props.handleLoginClick}>Войти</Button>
+        {props.login ? (
+          <Button onClick={props.handleLoginClick}>Выйти</Button>
         ) : (
-          false
-          // <Button onClick={props.handleLogoutClick}>Выйти</Button>
+          <Button onClick={props.handleLogoutClick}>Войти</Button>
         )}
       </div>
     </HeaderWrapper>

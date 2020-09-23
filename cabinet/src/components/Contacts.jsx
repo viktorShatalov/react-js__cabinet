@@ -3,11 +3,16 @@ import PropTypes from "prop-types";
 import { ContactItemsUl } from "../style/style";
 import ContactItem from "./ContactItem";
 
-const Contacts = ({ contacts }) => {
+const Contacts = ({ contacts, handleRemoveItme }) => {
   return (
     <ContactItemsUl>
       {contacts.map((c) => (
-        <ContactItem c={c} key={c.id} />
+        <ContactItem
+          contacts={contacts}
+          handleRemoveItme={handleRemoveItme}
+          c={c}
+          key={c.id}
+        />
       ))}
     </ContactItemsUl>
   );

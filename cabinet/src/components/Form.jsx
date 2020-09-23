@@ -1,10 +1,11 @@
 import React from "react";
-import { InputControl, FormControl } from "../style/style";
+import { InputControl, FormControl, Button } from "../style/style";
 
-export const Form = () => {
+export const Form = ({ addNewItem }) => {
   return (
     <FormControl>
       <InputControl type="text" placeholder="Новый контакт" />
+      <Button onClick={addNewItem}>Добавить</Button>
     </FormControl>
   );
 };

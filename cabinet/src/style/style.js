@@ -55,6 +55,7 @@ export const FormControl = styled.form`
   border: 1px solid #333333;
   padding: 20px 15px;
   border-radius: 4px;
+  height: 125px;
 `;
 export const ContactItemsUl = styled.ul`
   width: 100%;

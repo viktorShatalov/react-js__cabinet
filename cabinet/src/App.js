@@ -3,16 +3,14 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Main from "./components/Main";
 
-function App(props) {
+function App() {
   const [login, setLogin] = useState(false);
   const handleLoginClick = () => {
-    setLogin({ login: true });
-    console.log("yes");
+    setLogin(false);
   };
 
   const handleLogoutClick = () => {
-    setLogin({ login: false });
-    console.log("no");
+    setLogin(true);
   };
   return (
     <>
