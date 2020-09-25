@@ -1,6 +1,6 @@
 ### `инсталяция пакетов зависимостей React`
 
-npm i
+npm install
 
 ### `инсталяция json-server`
 
