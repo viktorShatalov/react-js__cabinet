@@ -1,19 +1,70 @@
 {
-  "posts": [
+  "contacts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 2
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 3
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 4
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 5
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 6
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 7
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 8
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 9
+    },
+    {
+      "name": "eosdigjfasfblsdbvks.,bsdeosdigjfasfblsdbvks.,bsdeosdigjfasfblsdbvks.,bsdeosdigjfasfblsdbvks.,bsd",
+      "country": "дывпоыжвпывлбпло",
+      "position": "пдывпылопдып",
+      "id": 10
+    },
+    {
+      "name": "13124",
+      "country": "asfasssssssssssssssssssssssfasfasfasasfasssssssssssssssssssssssfasfasfasasfasssssssssssssssssssssssfasfasfas",
+      "position": "",
+      "id": 11
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
