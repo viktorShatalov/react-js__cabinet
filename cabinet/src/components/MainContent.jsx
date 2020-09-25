@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import TutorialDataService from "../cervices/TutorialService";
 import { MainWrapperContent } from "../style/style";
 import Contacts from "./Contacts";
 import { Form } from "./Form";
@@ -8,37 +9,37 @@ export const MainContent = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [contacts, setContacts] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:3000/contacts")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setContacts(result);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-  }, []);
-
-  const addNewItem = (e) => {
-    setContacts([
-      ...contacts,
-      {
-        id: 6,
-        name: "contact 6",
-        country: "country 1",
-        position: "front 1",
+  // получаем всё
+  const getAllContacts = () => {
+    TutorialDataService.getAll().then(
+      (res) => {
+        setIsLoaded(true);
+        setContacts(res.data);
       },
-    ]);
-    e.preventDefault();
+      (error) => {
+        setIsLoaded(true);
+        setError(error);
+      }
+    );
   };
-  const handleRemoveItme = (e) => {
-    const name = e.target.getAttribute("name");
-    setContacts(contacts.filter((item) => item.name !== name));
+
+  // удаляем любой
+  const removeContacts = (id) => {
+    TutorialDataService.remove(`${id}`)
+      .then((res) => {
+        const del = contacts.filter((c) => id !== c.id);
+        setContacts(del);
+        console.log(res);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
+
+  useEffect(() => {
+    setTimeout(getAllContacts(contacts), 2500);
+  }, [contacts]);
+
   if (error) {
     return <span>Ошибка: {error.message}</span>;
   } else if (!isLoaded) {
@@ -46,8 +47,10 @@ export const MainContent = () => {
   } else
     return (
       <MainWrapperContent>
-        <Contacts contacts={contacts} handleRemoveItme={handleRemoveItme} />
-        <Form addNewItem={addNewItem} />
+        <Contacts contacts={contacts} removeContacts={removeContacts} />
+        <aside>
+          <Form contacts={contacts} />
+        </aside>
       </MainWrapperContent>
     );
 };

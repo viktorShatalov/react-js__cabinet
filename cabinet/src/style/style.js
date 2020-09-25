@@ -31,6 +31,8 @@ export const SpanText = styled.span`
   text-transform: uppercase;
   margin-top: 50px;
   display: inline-block;
+  text-align: center;
+  width: 100%;
 `;
 export const MainWrapperContent = styled.section`
   margin-top: 50px;
@@ -46,6 +48,7 @@ export const InputControl = styled.input`
   border: 1px solid #333333;
   padding: 7px 15px;
   border-radius: 4px;
+  margin-bottom: 10px;
 `;
 export const FormControl = styled.form`
   width: 100%;
@@ -55,7 +58,14 @@ export const FormControl = styled.form`
   border: 1px solid #333333;
   padding: 20px 15px;
   border-radius: 4px;
-  height: 125px;
+`;
+export const ContactItemsHead = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 20px;
+  justify-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.2);
 `;
 export const ContactItemsUl = styled.ul`
   width: 100%;
@@ -75,6 +85,8 @@ export const SpanDelBtn = styled.span`
   width: 20px;
   height: 100%;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
   &::before {
     content: "";
     position: absolute;
@@ -96,5 +108,8 @@ export const SpanDelBtn = styled.span`
     background-color: #333333;
     transform: rotate(-45deg);
     display: block;
+  }
+  &:hover {
+    background-color: red;
   }
 `;

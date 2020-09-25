@@ -1,20 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ContactItemsUl } from "../style/style";
+import { ContactItemsUl, ContactItemsHead } from "../style/style";
 import ContactItem from "./ContactItem";
 
-const Contacts = ({ contacts, handleRemoveItme }) => {
+const Contacts = ({ contacts, removeContacts }) => {
   return (
-    <ContactItemsUl>
-      {contacts.map((c) => (
-        <ContactItem
-          contacts={contacts}
-          handleRemoveItme={handleRemoveItme}
-          c={c}
-          key={c.id}
-        />
-      ))}
-    </ContactItemsUl>
+    <article>
+      <ContactItemsHead>
+        <span>Имя</span>
+        <span>Страна</span>
+        <span>Должность</span>
+      </ContactItemsHead>
+      <ContactItemsUl>
+        {contacts.map((c) => (
+          <ContactItem c={c} removeContacts={removeContacts} key={c.id} />
+        ))}
+      </ContactItemsUl>
+    </article>
   );
 };
 

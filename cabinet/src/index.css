@@ -16,3 +16,6 @@
   width: 100%;
   display: inline-block;
 }
+.contact__item {
+  word-break: break-all;
+}
